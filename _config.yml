@@ -48,8 +48,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 
 baseurl: "/" # the subpath of your site, e.g. /blog
-domain: mjsso.github.io/zzjans
-url: "https://mjsso.github.io/zzjans/" # the base hostname & protocol for your site, e.g. http://example.com
+domain: coffeemj.github.io/zzjans
+url: "https://coffeemj.github.io/zzjans/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Yat date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
