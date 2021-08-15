@@ -2,7 +2,7 @@
 # langs refer to https://cloud.google.com/translate/docs/languages
 
 - lang: en
-  img: /zzjans/assets/images/langs/united-states.png
+  img: "assets/images/langs/united-states.png"
   text: English
 
 # - lang: fr
@@ -18,7 +18,7 @@
 #   text: Japanese
 
 - lang: ko
-  img: /zzjans/assets/images/langs/south-korea.png
+  img: "assets/images/langs/south-korea.png"
   text: Korean
 
 # - lang: ru
