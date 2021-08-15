@@ -47,8 +47,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 
-baseurl: "/" # the subpath of your site, e.g. /blog
-domain: coffeemj.github.io/zzjans
+baseurl: "/zzjans/" # the subpath of your site, e.g. /blog
+domain: coffeemj.github.io
 url: "https://coffeemj.github.io/zzjans/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Yat date format
@@ -135,11 +135,11 @@ lang: "ko"  # default lang is en
 
 # Code badge setting
 # You can enable or disable the code badge and so on
-# code_badge:
-#   enabled: "true"
-#   color: "#fff"
-#   background_color: "#ff4e00"
-#   text_transform: "uppercase"  # ("uppercase", "lowercase", "capitalize")
+code_badge:
+  enabled: "true"
+  color: "#fff"
+  background_color: "#bb1b59"
+  text_transform: "capitalize"  # ("uppercase", "lowercase", "capitalize")
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up

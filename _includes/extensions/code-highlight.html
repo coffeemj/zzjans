@@ -1,6 +1,6 @@
 <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark-reasonable.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
 <!-- and it's easy to individually load additional languages -->
 <script charset="UTF-8"
         src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
@@ -75,13 +75,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
     color: {{badge_color}};
     background-color: {{badge_background_color}};
     padding: 0 .5em;
-    border-radius: 0 2px;
+    border-radius: 15px;
     text-transform: {{badge_text_transform}};
     text-align: center;
     min-width: 32px;
     display: inline-block;
     position: absolute;
-    right: 0;
+    top: 3px;
+    right: 2px;
   }
 
   /* fix wrong badge display for firefox browser */
