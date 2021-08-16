@@ -33,4 +33,4 @@ $brand-color: map-get($brand-colors, "orangered");
   $brand-color: {{ site.brand_color | default: '#ff5100' }};
 }
 
-@import "yat";
+@import "yat", "pg";

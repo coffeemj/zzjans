@@ -66,3 +66,8 @@
   {% assign has_banner = true %}
 {% endif %}
 
+{%- include functions.html func='log' level='debug' msg='Get banner_background_html value' -%}
+{% assign name = 'banner.background_html' %}
+{%- include functions.html func='get_value' -%}
+{% assign banner_background_html = return %}
+

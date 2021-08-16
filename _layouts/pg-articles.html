@@ -1,0 +1,12 @@
+---
+layout: pg-framework
+---
+
+<div class="pg-articles">
+    {% if page.banner == nil %}
+    {% assign banner = page.title %}
+    {% endif %}
+
+    {{ content }}
+
+</div>

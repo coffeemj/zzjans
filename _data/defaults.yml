@@ -2,3 +2,7 @@ home:
   heading: "인생은 공부의 연속"
   subheading: "관심있는 것들을 기록하는 장소입니다."
   banner: assets/images/banners/home3.png
+pg-home:
+  heading: 'Playground'
+  banner:
+    background_html: pg-home-background.html

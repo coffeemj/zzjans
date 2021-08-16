@@ -1,0 +1,19 @@
+
+{%- include functions.html func='log' level='debug' msg='Get heading value' -%}
+{% assign name = 'heading' %}
+{%- include functions.html func='get_value' -%}
+{% assign heading = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get subheading value' -%}
+{% assign name = 'subheading' %}
+{%- include functions.html func='get_value' -%}
+{% assign subheading = return %}
+
+<div class="banner-wrapper">
+    <!-- <div style="background-image: url('{{ '/assets/images/gif/motion1.gif' | relative_url }}')"></div> -->
+    <img class="banner-motion-image1" src="{{ '/assets/images/gif/motion1.gif' | relative_url }}" />
+    <img class="banner-motion-image2" src="{{ '/assets/images/gif/walking_html.gif' | relative_url }}" />
+    <div class="page-banner-heading">
+        {{ heading | default: page.title | escape }}
+    </div>
+</div>

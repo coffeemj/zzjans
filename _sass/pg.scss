@@ -1,0 +1,111 @@
+.pg {
+    font-family: Garamond, "Times New Roman", serif;
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    hr,
+    dl,
+    dd,
+    ol,
+    ul,
+    figure {
+        font-family: Garamond, "Times New Roman", serif;
+    }
+    
+    .page-content {
+        background-color: black;
+        color: #dffcfb;
+    }
+
+    .site-footer {
+        background-color: black;
+    }
+
+    .banner-wrapper {
+        height: 100%;
+        background-color: black;
+
+        .banner-motion-image1 {
+            position: absolute;
+            right: 3rem;
+            top: 3rem;
+            max-height: 450px;
+            @include media-query($on-laptop) {
+                height: 300px;
+            }
+            @include media-query($on-palm) {
+                right: 0;
+                top: 3rem;
+                height: 200px;
+            }
+        }
+
+        .banner-motion-image2 {
+            position: absolute;
+            left: 4rem;
+            bottom: 3rem;
+            max-height: 300px;
+            @include media-query($on-laptop) {
+                height: 200px;
+            }
+            @include media-query($on-palm) {
+                height: 77px;
+            }
+        }
+
+        .banner-motion-image3 {
+            position: absolute;
+            right: 16%;
+            bottom: 16%;
+            max-height: 200px;
+
+            -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+            transition: width 2s, height 2s, background-color 2s, transform 2s;
+            &:hover {
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            @include media-query($on-laptop) {
+                height: 150px;
+            }
+            @include media-query($on-palm) {
+                height: 77px;
+            }
+        }
+
+        .banner-motion-image4 {
+            position: absolute;
+            left: 14%;
+            top: 14%;
+            max-height: 250px;
+            @include media-query($on-laptop) {
+                height: 150px;
+            }
+            @include media-query($on-palm) {
+                height: 77px;
+            }
+        }
+
+        .page-banner-heading {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            height: auto;
+            color: white;
+            z-index: 300;
+            margin-top: 10%;
+            font-size: 3rem;
+            @include media-query($on-palm) {
+                @include relative-font-size(1.975);
+            }
+        }
+    }
+}
