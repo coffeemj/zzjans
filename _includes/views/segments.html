@@ -1,21 +1,23 @@
 {%- if include.keys -%}
-  {%- assign keys = include.keys -%}
+{%- assign keys = include.keys -%}
 {%- endif -%}
 
 {%- if include.field -%}
-  {%- assign field = include.field -%}
+{%- assign field = include.field -%}
 {%- endif -%}
 
 <div class="page-segments">
   <ul class="page-segments-list">
     {% for key in keys %}
+    {% if key != 'art' and key != 'pg' %}
     <h2 id="{{ key }}" class="segment-name">{{ key }}</h2>
-      {% assign items = site.posts | where: field, key %}
-      {% for item in items %}
-        {% if item != nil %}
-        <li> {% include views/post-item.html %} </li>
-        {% endif %}
-      {% endfor %}
+    {% assign items = site.posts | where: field, key %}
+    {% for item in items %}
+    {% if item != nil %}
+    <li> {% include views/post-item.html %} </li>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
     {% endfor %}
   </ul>
 </div>

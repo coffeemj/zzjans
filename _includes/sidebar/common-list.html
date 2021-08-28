@@ -15,11 +15,13 @@
     </li>
 
     {% for key in  keys %}
+    {% if key != 'art' and key != 'pg' %}
       <li>
         <a href="{{ url }}#h-{{ key }}">
           {{ key }} <span>{{ site.posts | where: field, key | size }}</span>
         </a>
       </li>
+    {% endif %}
     {% endfor %}
   </ul>
 </div>
