@@ -1,7 +1,7 @@
 {%- if page.paginator -%}
-  {%- assign paginator = page.paginator -%}
+{%- assign paginator = page.paginator -%}
 {%- elsif paginator == nil -%}
-  {%- assign paginator = site -%}
+{%- assign paginator = site -%}
 {%- endif -%}
 
 {%- if paginator.posts.size > 0 -%}
@@ -9,6 +9,7 @@
   <!-- Post list links -->
   <ul class="post-list">
     {%- for post in paginator.posts -%}
+    {% unless post.categories contains 'pg' %}
     <li>
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
 
@@ -31,7 +32,7 @@
       </div>
       <a class="post-excerpt" href="{{ post_url }}">
         <p>
-        {{ excerpt }} <span class="read_more">Read More</span>
+          {{ excerpt }} <span class="read_more">Read More</span>
         </p>
       </a>
       <div class="post-tags">
@@ -40,12 +41,10 @@
         {%- endfor -%}
       </div>
     </li>
+    {% endunless %}
     {%- endfor -%}
   </ul>
 
   <!-- Pagination links -->
-  {%- if paginator.posts.size < site.posts.size -%}
-    {%- include views/paginator.html -%}
-  {%- endif -%}
-</div>
-{%- endif -%}
+  {%- if paginator.posts.size < site.posts.size -%} {%- include views/paginator.html -%} {%- endif -%} </div>
+    {%- endif -%}

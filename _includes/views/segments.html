@@ -14,7 +14,9 @@
     {% assign items = site.posts | where: field, key %}
     {% for item in items %}
     {% if item != nil %}
+    {% unless item.categories contains 'pg' %}
     <li> {% include views/post-item.html %} </li>
+    {% endunless %}
     {% endif %}
     {% endfor %}
     {% endif %}
