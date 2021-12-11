@@ -12,19 +12,21 @@ layout: pg-home
     }
 
     .pg-grid img {
-        border: 1px solid #ccc;
         box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
         max-width: 100%;
+        width: 250px;
+        display: block;
+        margin: 15px;
     }
 </style>
 
-## hello
+<h2>Sprezzatura</h2>
 
 <article class="pg-grid">
     {%- if site.posts.size > 0 -%}
     {%- for post in site.categories.art -%}
     <a class="post-link" href="{{ post.url | relative_url }}">
-        <img src={{post.image | relative }} />
+        <img src={{post.image | relative }} class="post-image" />
         {{post.title}}
     </a>
     {%- endfor -%}
